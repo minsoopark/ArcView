@@ -1,59 +1,12 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/group_back" >
 
     <bbarm.viewtest.view.ArcView
-        android:id="@+id/hourBackArcView"
+        android:id="@+id/arcView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center" />
-
-    <bbarm.viewtest.view.ArcView
-        android:id="@+id/minuteBackArcView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center" />
-
-    <bbarm.viewtest.view.ArcView
-        android:id="@+id/minuteArcView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center" />
-
-    <bbarm.viewtest.view.ArcView
-        android:id="@+id/hourArcView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center" />
-
-    <ImageButton
-        android:id="@+id/amButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:background="@drawable/am_bt"
-        android:tag="am" />
-
-    <ImageButton
-        android:id="@+id/pmButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:background="@drawable/pm_bt"
-        android:tag="pm" />
-
-    <TextView
-        android:id="@+id/timeTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal|bottom"
-        android:layout_marginBottom="40dp"
-        android:gravity="center"
-        android:text="AM 06:00"
-        android:textColor="#ebebeb"
-        android:textSize="35sp"
-        android:textStyle="bold" />
 
 </FrameLayout>
