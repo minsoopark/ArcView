@@ -1,6 +1,7 @@
 ArcView
 =======
 ArcView is a simple arc-drawing view.
+It can also receive touch events. (you can use OnAngleChangedListener)
 
 
 Usability
