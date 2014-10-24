@@ -26,68 +26,68 @@ public class ArcView extends View {
     private float startAngle, endAngle;
     private boolean flipping;
     private int flipUnit;
-	
-	public ArcView(Context context) {
-		this(context, null);
-	}
+    
+    public ArcView(Context context) {
+        this(context, null);
+    }
 
-	public ArcView(Context context, AttributeSet attrs) {
-		this(context, attrs, 0);
-	}
+    public ArcView(Context context, AttributeSet attrs) {
+        this(context, attrs, 0);
+    }
 
-	public ArcView(Context context, AttributeSet attrs, int defStyle) {
-		super(context, attrs, defStyle);
-		init();
-	}
+    public ArcView(Context context, AttributeSet attrs, int defStyle) {
+        super(context, attrs, defStyle);
+        init();
+    }
 
-	private void init() {
-		paint = new Paint();
-		paint.setAntiAlias(true);
-		paint.setStyle(Paint.Style.STROKE);
+    private void init() {
+        paint = new Paint();
+        paint.setAntiAlias(true);
+        paint.setStyle(Paint.Style.STROKE);
 
-	}
+    }
 
-	public void setColor(int color) {
+    public void setColor(int color) {
         this.color = color;
-		paint.setColor(color);
-	}
+        paint.setColor(color);
+    }
 
-	public void setStrokeWidth(float width) {
+    public void setStrokeWidth(float width) {
         this.width = width;
-		paint.setStrokeWidth(width);
-	}
+        paint.setStrokeWidth(width);
+    }
 
     public float getStrokeWidth() {
         return this.width;
     }
 
-	public void setOvalSize(float left, float top, float right, float bottom) {
-		arcOval.set(left, top, right, bottom);
-	}
-	
-	public void setStartAngle(float startAngle) {
-		this.startAngle = startAngle;
-	}
+    public void setOvalSize(float left, float top, float right, float bottom) {
+        arcOval.set(left, top, right, bottom);
+    }
+    
+    public void setStartAngle(float startAngle) {
+        this.startAngle = startAngle;
+    }
 
     public Canvas getCanvas() {
-		return arcCanvas;
-	}
-	
-	public void setEndAngle(float endAngle){
-		this.endAngle = endAngle;
-	}
-	
-	public float getEndAngle(){
-		return this.endAngle;
-	}
-	
-	public RectF getOval() {
-		return arcOval;
-	}
+        return arcCanvas;
+    }
+    
+    public void setEndAngle(float endAngle){
+        this.endAngle = endAngle;
+    }
+    
+    public float getEndAngle(){
+        return this.endAngle;
+    }
+    
+    public RectF getOval() {
+        return arcOval;
+    }
 
-	public Paint getPaint() {
-		return paint;
-	}
+    public Paint getPaint() {
+        return paint;
+    }
 
     public void setFlippingEnabled(boolean flipping) {
         this.flipping = flipping;
@@ -109,18 +109,18 @@ public class ArcView extends View {
         this.listener = listener;
     }
 
-	@Override
-	protected void onDraw(Canvas canvas) {
-		super.onDraw(canvas);
+    @Override
+    protected void onDraw(Canvas canvas) {
+        super.onDraw(canvas);
 
-		arcCanvas = canvas;
-		float sweep = this.getEndAngle() - startAngle;
-		if (sweep > 360){
-			sweep -= 360;
-		}
-		arcCanvas.drawArc(arcOval, startAngle, sweep, false, paint);
-		
-	}
+        arcCanvas = canvas;
+        float sweep = this.getEndAngle() - startAngle;
+        if (sweep > 360){
+            sweep -= 360;
+        }
+        arcCanvas.drawArc(arcOval, startAngle, sweep, false, paint);
+        
+    }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
