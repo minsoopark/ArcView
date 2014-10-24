@@ -18,7 +18,7 @@ public class ArcView extends View {
     }
 
     private OnAngleChangedListener listener;
-	private Paint paint;
+    private Paint paint;
     private Canvas arcCanvas;
     private RectF arcOval = new RectF();
     private int color;
@@ -69,7 +69,7 @@ public class ArcView extends View {
 		this.startAngle = startAngle;
 	}
 
-	public Canvas getCanvas() {
+    public Canvas getCanvas() {
 		return arcCanvas;
 	}
 	
