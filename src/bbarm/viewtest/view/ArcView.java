@@ -157,10 +157,11 @@ public class ArcView extends View {
                 float targetAngle = touchUpAngle;
 
                 if(flipping) {
-                    float flipToAngle = touchUpAngle - touchUpAngle % 30;
+                    int flippingUnit = getFlippingUnit();
+                    float flipToAngle = touchUpAngle - touchUpAngle % flippingUnit;
 
-                    if(touchUpAngle % 30 >= 15) {
-                        flipToAngle = flipToAngle + 30;
+                    if(touchUpAngle % flippingUnit >= flippingUnit / 2) {
+                        flipToAngle = flipToAngle + flippingUnit;
                     }
 
                     targetAngle = flipToAngle;
